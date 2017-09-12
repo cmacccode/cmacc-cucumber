@@ -12,3 +12,5 @@ Feature: Example
     Given I compile the "features/support/example.cmacc" contract
     # Separate nested values with '.'
     Then the value of "foo.bar" is "baz"
+    When I render the document
+    Then I see "baz" in the document

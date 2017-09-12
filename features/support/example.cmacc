@@ -1,3 +1,5 @@
 $ foo = [./bar.cmacc]
 
-Example document {{foo}}
+<h1>Example document</h1>
+
+{{foo.bar}}
