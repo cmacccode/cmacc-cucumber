@@ -12,9 +12,12 @@
     "node-fetch": "^1.7.3"
   },
   "devDependencies": {
-    "cucumber": "^3.0.1"
+    "cucumber": "3.0.1"
   },
   "scripts": {
     "test": "./node_modules/.bin/cucumber.js"
+  },
+  "bin": {
+    "cmacc-cucumber": "./bin/run.js"
   }
 }
