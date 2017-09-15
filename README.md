@@ -1,11 +1,12 @@
 # cmacc-cucumber
 Cucumber steps for testing CMACC documents
 
-## install cucumber
-The project requires CucumberJS: https://github.com/cucumber/cucumber-js
-
-## install steps
+## Install/run
 npm install --save-dev cmacc-cucumber
+
+Run 'cmacc-cucumber'
+
+## Adding/modifying steps
 
 Add the following to a file in your cucumber load path (e.g. in features/support/load.js):
 ```
