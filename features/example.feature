@@ -18,8 +18,15 @@ Feature: Example
     And the following variable value pairs exist:
       | variable | value |
       | foo.bar  | baz   |
-      | foo.bar  | baz   |
+      | foo.qux  | quux  |
 
     # Render the document and set expectations on the content
     When I render the document
     Then I see "baz" in the document
+    And I don't see "quux"
+
+    # Change values of variables and render again to see the change
+    When I change "foo.bar" to "henk"
+    And I render the document
+    Then I don't see "baz" in the document
+    But I do see "henk"
