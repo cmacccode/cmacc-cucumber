@@ -7,16 +7,17 @@ Feature: Example
   I want to test the CMACC steps
   To ensure they work correctly
 
+  # Usage of 'document' can be changed to 'contract' or 'file' or even omitted
+  # in some cases
   Scenario: Example usage of CMACC steps
-    # Find contract from the root of your project
-    Given I compile the "features/support/example.cmacc" contract
+    # Find the document from the root of your project
+    Given I compile the "features/support/example.cmacc" document
 
     # Separate nested values with '.'
     Then the value of "foo.bar" is "baz"
 
     # Give a table when there are a lot of values
-    And the following variable value pairs exist:
-      | variable | value |
+    And it contains the following variables and values:
       | foo.bar  | baz   |
       | foo.qux  | quux  |
 
