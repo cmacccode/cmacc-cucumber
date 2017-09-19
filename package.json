@@ -1,6 +1,6 @@
 {
   "name": "cmacc-cucumber",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Cucumber steps for testing CMACC",
   "repository": "https://github.com/cmacclang/cmacc-cucumber.git",
   "main": "index.js",
