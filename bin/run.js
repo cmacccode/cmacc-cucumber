@@ -12,10 +12,16 @@ const cli = new cucumber.Cli({
 });
 
 let done = false;
-cli.run().then(res => (done = true)).catch(err => {
-  done = true;
-  throw err;
-});
+cli
+  .run()
+  .then(res => {
+    if (!res) process.exitCode = 1;
+    done = true;
+  })
+  .catch(err => {
+    done = true;
+    throw err;
+  });
 
 function wait() {
   if (!done) setTimeout(wait, 1000);
