@@ -11,4 +11,13 @@ const cli = new cucumber.Cli({
   stdout: process.stdout
 });
 
-cli.run()
+let done = false;
+cli.run().then(res => (done = true)).catch(err => {
+  done = true;
+  throw err;
+});
+
+function wait() {
+  if (!done) setTimeout(wait, 1000);
+}
+wait();
