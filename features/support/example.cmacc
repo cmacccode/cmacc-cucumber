@@ -1,4 +1,4 @@
-$ foo = [./bar.cmacc]
+$ foo = [./foo.cmacc]
 
 <h1>Example document</h1>
 

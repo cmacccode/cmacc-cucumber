@@ -18,8 +18,8 @@ Feature: Example
 
     # Give a table when there are a lot of values
     And it contains the following variables and values:
-      | foo.bar  | baz   |
-      | foo.qux  | quux  |
+      | foo.bar | baz  |
+      | foo.qux | quux |
 
     # Render the document and set expectations on the content
     When I render the document
